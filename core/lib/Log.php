@@ -18,7 +18,7 @@ class Log
 		$obj = self::init();
 
 		$obj['obj']->pushHandler(new StreamHandler($obj['file'], Logger::INFO));
-		$obj['obj']->info($text,empty($data) ? array() : $data);
+		return $obj['obj']->info($text,empty($data) ? array() : $data);
 	}
 	/**
 	 * [debug 调试信息 Detailed debug information.]
@@ -31,7 +31,7 @@ class Log
 		$obj = self::init();
 
 		$obj['obj']->pushHandler(new StreamHandler($obj['file'], Logger::DEBUG));
-		$obj['obj']->debug($text,empty($data) ? array() : $data);
+		return $obj['obj']->debug($text,empty($data) ? array() : $data);
 	}
 	/**
 	 * [notice 注意 Normal but significant events]
@@ -44,7 +44,7 @@ class Log
 		$obj = self::init();
 
 		$obj['obj']->pushHandler(new StreamHandler($obj['file'], Logger::NOTICE));
-		$obj['obj']->notice($text,empty($data) ? array() : $data);
+		return $obj['obj']->notice($text,empty($data) ? array() : $data);
 	}
 	/**
 	 * [warning 警告 Exceptional occurrences that are not errors. Examples: Use of deprecated APIs, poor use of an API, undesirable things that are not necessarily wrong.]
@@ -57,7 +57,7 @@ class Log
 		$obj = self::init();
 
 		$obj['obj']->pushHandler(new StreamHandler($obj['file'], Logger::WARNING));
-		$obj['obj']->warning($text,empty($data) ? array() : $data);
+		return $obj['obj']->warning($text,empty($data) ? array() : $data);
 	}
 	/**
 	 * [error 错误 Runtime errors that do not require immediate action but should typically be logged and monitored.]
@@ -70,7 +70,7 @@ class Log
 		$obj = self::init();
 
 		$obj['obj']->pushHandler(new StreamHandler($obj['file'], Logger::ERROR));
-		$obj['obj']->error($text,empty($data) ? array() : $data);
+		return $obj['obj']->error($text,empty($data) ? array() : $data);
 	}
 	/**
 	 * [critical 危急 Critical conditions. Example: Application component unavailable, unexpected exception.]
@@ -83,7 +83,7 @@ class Log
 		$obj = self::init();
 
 		$obj['obj']->pushHandler(new StreamHandler($obj['file'], Logger::CRITICAL));
-		$obj['obj']->critical($text,empty($data) ? array() : $data);
+		return $obj['obj']->critical($text,empty($data) ? array() : $data);
 	}
 	/**
 	 * [alert 警报 Action must be taken immediately. Example: Entire website down, database unavailable, etc. This should trigger the SMS alerts and wake you up.]
@@ -96,7 +96,7 @@ class Log
 		$obj = self::init();
 
 		$obj['obj']->pushHandler(new StreamHandler($obj['file'], Logger::ALERT));
-		$obj['obj']->alert($text,empty($data) ? array() : $data);
+		return $obj['obj']->alert($text,empty($data) ? array() : $data);
 	}
 	/**
 	 * [emergency 急 Emergency: system is unusable.]
@@ -109,7 +109,7 @@ class Log
 		$obj = self::init();
 
 		$obj['obj']->pushHandler(new StreamHandler($obj['file'], Logger::EMERGENCY));
-		$obj['obj']->emergency($text,empty($data) ? array() : $data);
+		return $obj['obj']->emergency($text,empty($data) ? array() : $data);
 	}
 
 

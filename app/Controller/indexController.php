@@ -11,7 +11,8 @@ class indexController extends \core\core
 
 		$model = new adminModel();
 		$users = $model->all();
-		
+
+		$test = Log::info('this is Log test');
 		$data = 'this is view';
 		$this->display('index.index',[
 			'data' => $data,

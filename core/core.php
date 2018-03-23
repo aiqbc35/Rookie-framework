@@ -52,7 +52,6 @@ class core
 			}else{
 				return false;
 			}
-
 		}
 	}
 
@@ -63,8 +62,11 @@ class core
 
 	public function display($file,$data=array())
 	{
-				
-			$blade = new BladeInstance(APP . '/view/', ROOT_PATH . 'store/theme');
+			$cachePath = ROOT_PATH . 'store/theme';
+			if (!is_dir($cachePath)) {
+				mkdir($cachePath,0777,true);
+			}
+			$blade = new BladeInstance(APP . '/view/',$cachePath);
 			echo $blade->render($file,$data);
 					
 	}
