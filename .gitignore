@@ -1,1 +1,4 @@
 /vendor
+/store/log
+/store/theme
+composer.lock

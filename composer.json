@@ -10,6 +10,7 @@
 		"filp/whoops":"*",
 		"symfony/var-dumper":"*",
 		"duncan3dc/blade": "^4.0",
-		"illuminate/database":"*"
+		"illuminate/database":"*",
+		"monolog/monolog": "^1.23"
 	}
 }
