@@ -1,5 +1,4 @@
 /vendor
-/store/log/
-/store/theme/
+/store/
 composer.lock
 .DS_Store
